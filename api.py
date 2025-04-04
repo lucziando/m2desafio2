@@ -46,7 +46,7 @@ def doar():
 @app.route('/livros', methods=['GET'])
 
 def listar_livros():
-    with sqlite3.connect('database.bd') as conn:
+    with sqlite3.connect('database.db') as conn:
         livros = conn.execute("SELECT * FROM livros").fetchall()
 
         livros_formatados = []
